@@ -95,7 +95,7 @@ section{
     gap: 10rem;
 }
 .about img{
-    width: 20vw;
+    width: 30vw;
     border-radius: 30%;
 }
 .info-box{
@@ -159,8 +159,8 @@ section{
     gap: 3rem;
 }
 .experience img{
-    width: 14vw;
-    border-radius: 2rem;
+    width: 20vw;
+    border-radius: 4rem;
 }
 .grid{
     display: grid;
