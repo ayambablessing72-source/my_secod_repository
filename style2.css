@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --background: rgba(24,24,24);
+    --second-background: rgba(21,21,21);
+}
+body{
+    min-height: 100vh;
+    background-color: var(--background);
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2em 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+nav ul a{
+    color: white;
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+}
+nav ul a:hover{
+    opacity: 1;
+}
+.logo{
+    font-size: 2em;
+    color: white;
+    font-weight: 800;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+.logo:hover{
+    opacity: 1;
+}
+.btn{
+    padding: 0.5em 1em;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: white;
+    color: var(--background);
+}
+.span{
+    background: linear-gradient(to right, #f7883e, #9fd4eb);
+    background-clip: text;
+    color: transparent;
+}
+#menu i{
+    color: rgb(242, 231, 231);
+    font-size: 3em;
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 5% 15%;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: white;
+}
+#home img{
+    width: 18vw;
+    border-radius: 50%;
+    margin-top: 3em;
+}
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    max-width: 600px;
+}
+.info-box h1{
+    font-size: 5em;
+    font-weight: 500;
+    background: linear-gradient(to right, #f7883e, #9fd4eb);
+     background-clip: text;
+    color: transparent;
+}
+.info-box h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+.info-box .like{
+     background: linear-gradient(to right, #f7883e, #9fd4eb);
+     background-clip: text;
+    color: transparent;
+}
+.info-box p{
+    opacity: 0.7;
+}
+.btn-box{
+    display: flex;
+    gap: 1em;
+}
+.btn-box .btn:nth-of-type(2){
+    background-color: white;
+    color: var(--background);
+}
+.btn-box .btn:nth-of-type(2):hover{
+    background-color: var(--background);
+    color: white;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #f0550e;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #f7883e, #9fd4eb);
+}
+#about{
+    background-color: var(--second-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+#about img{
+    width: 20vw;
+    border-radius: 1em;
+}
+.about-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2em;
+}
+.about-box h1{
+    font-size: 5em;
+    background: linear-gradient(to right, #f7883e, #9fd4eb);
+     background-clip: text;
+    color: transparent;
+}
+.about-box p{
+    color: white;
+    opacity: 0.8;
+}
+.skills{
+    display: flex;
+    text-align: left;
+    gap: 10em;
+    
+}
+.skills ul{
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+   
+
+}
+.skills ul li{
+    display: flex;
+    gap: 0.5em;
+    font-size: 1.2em;
+    transition: 0.3s ease-in-out;
+     background: linear-gradient(to right, #f7883e, #9fd4eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-color-fill: transparent;
+    color: transparent;
+}
+.skills ul li:hover{
+    transform: translateX(10px);
+}
+.skills ul li i{
+    font-size: 0.9em;
+    gap: 0.5em;
+    margin-right: 12px;
+}
+.about-box h2{
+    font-size: 2.5em;
+    background: linear-gradient(to right, rgb(239, 147, 11), #58b1d7);
+     background-clip: text;
+    color: transparent;
+}
+#services{
+    background-color: var(--background);
+}
+.header{
+    text-align: center;
+    font-size: 5em;
+    margin: 0.5em 0;
+     background: linear-gradient(to right, rgb(239, 147, 11), #58b1d7);
+     background-clip: text;
+    color: transparent;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 2em;
+}
+.box{
+    border: 3px solid rgba(49, 49, 49);
+    border-radius: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+    padding: 3em;
+    gap: 2em;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.box:hover{
+    border: 3px solid rgba(100, 100, 100);
+}
+.box p{
+    opacity: 0.8;
+}
+.box h1{
+    font-size: 2em;
+     background: linear-gradient(to right, rgb(239, 147, 11), #58b1d7);
+     background-clip: text;
+    color: transparent;
+}
+.box img{
+    min-width: 25px;
+    border-radius: 0.9em;
+}
+#contact{
+    background-color: var(--second-background);
+    justify-content: center;
+    align-items: center;
+}
+.header-1{
+    text-align: center;
+    font-size: 5em;
+    margin: 0.5em 0;
+    background: linear-gradient(to right, rgb(239, 147, 11), #58b1d7);
+    background-clip: text;
+    color: transparent;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
+  align-items: flex-start;
+  max-width: 600px; 
+}
+.text{
+    color: white;
+    font-size: 1.5em;
+    background: linear-gradient(to right, rgb(239, 147, 11), #58b1d7);
+    background-clip: text;
+    color: transparent;
+}
+
+.input-box label {
+  width: 140px; 
+  margin-bottom: 8px;
+  flex-shrink: 0; 
+
+}
+
+.input-box input,
+.input-box textarea {
+  flex-grow: 1; 
+  padding: 28px;
+  font-size: 1em;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 79%;
+  border: none;
+  outline: none;
+}
+
+form input:focus{
+    background: rgba(229, 229, 229);
+}
+/* 1. Main Footer Wrapper Container */
+footer {
+  background-color: #111111; /* Sleek dark color matching your design background */
+  color: #ffffff;
+  padding: 60px 20px 20px 20px;
+  margin-top: 80px; /* Separates the footer from your main content layout blocks */
+  border-top: 1px solid #222222;
+  font-family: sans-serif;
+}
+
+/* 2. Flexbox Splitting Layout Into Two Sections Side-by-Side */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* 3. Global Styles for Both Left and Right Sections */
+.footer-section {
+  flex: 1; /* Assigns equal horizontal space sizing to both boxes */
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-section p {
+  color: #bbbbbb;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* Styling specific to the left section icons */
+.contact-info i {
+  color: #f7883e; /* Matches your beautiful orange logo accent */
+  margin-right: 10px;
+  width: 18px; /* Standardizes icon horizontal spacing alignment */
+}
+
+/* 4. Social Media Icon Layout Structure underneath services */
+.footer-socials {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  color: #ffffff;
+  font-size: 1.5rem; /* Makes your app icons stand out */
+  transition: transform 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+/* Accent interactions using your exact website theme gradient colors */
+.footer-socials a:hover {
+  transform: translateY(-3px); /* Subtle floating lift effect */
+  color: #5ac3f1; /* Your logo accent blue color on hover */
+}
+
+/* 5. Clean Bottom Copyright Banner Border */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #222222;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+/* 📱 Responsive Mobile Fallback Rules */
+@media (max-width: 968px) {
+  .footer-container {
+    flex-direction: column; /* Stacks sections neatly into a single line array */
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .footer-socials {
+    justify-content: center; /* Centers the app links on small phones */
+  }
+}
+
+/* ==========================================================================
+   📱 MOBILE & TABLET LAYOUTS (Screens smaller than 768px wide)
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. Stack your footer sections vertically */
+  .footer-container {
+    flex-direction: column; 
+    text-align: center; /* Center-align text for cleaner mobile aesthetics */
+    gap: 35px;
+  }
+
+  /* 2. Make your contact input rows wrap cleanly on mobile screens */
+  .input-box {
+    flex-direction: column; /* Stacks label on top of the text box on tiny devices */
+    align-items: flex-start; /* Aligns them nicely to the left edge */
+    gap: 8px;
+  }
+
+  .input-box label {
+    width: 100%; /* Labels take up full row row space on phones */
+  }
+
+  /* 3. Scale down overly massive font headings so they don't break lines awkwardly */
+  h1 {
+    font-size: 2rem;
+  }
+}
+
